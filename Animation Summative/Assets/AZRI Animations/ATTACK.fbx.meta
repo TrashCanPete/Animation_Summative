@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: ac2a98433583df74d9a41e8d1f9302e1
+guid: beab13b5e5638e84783d9d689b6fc540
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
   - first:
-      74: 4671459664662936169
-    second: SHEATH
+      74: -5869465931270112493
+    second: ATTACK
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -17,7 +17,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
-    motionNodeName: 
+    motionNodeName: AZRI:joints/AZRI:BND_C_World1/AZRI:BND_C_Root
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: SHEATH
-      takeName: SHEATH
-      internalID: 4671459664662936169
-      firstFrame: 865
-      lastFrame: 970
+      name: ATTACK
+      takeName: ATTACK
+      internalID: -5869465931270112493
+      firstFrame: 1500
+      lastFrame: 1604
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -113,7 +113,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: AZRI:BND_C_Root
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1

@@ -17,14 +17,72 @@ public class AZRIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetButtonDown("Fire2"))
         {
-            anim.SetTrigger("DrawSword");
-            
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("IDLE"))
+            {
+                anim.SetTrigger("DrawSword");
+            }
+
         }
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetButtonDown("Fire2"))
         {
-            anim.SetTrigger("Sheath");
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("COMBAT IDLE"))
+            {
+                anim.SetTrigger("Sheath");
+            }
+
+        }
+        if (Input.GetButtonDown("Fire1"))
+        {
+            anim.SetBool("Attack", true);
+        }
+        else
+        {
+            anim.SetBool("Attack", false);
+        }
+
+        if (Input.GetAxis("Horizontal") > 0)
+        {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("COMBAT IDLE"))
+            {
+                anim.SetBool("CombatWalk", true);
+                anim.SetBool("StopCombatWalking", false);
+            }
+        }
+
+        if (Input.GetAxis("Horizontal") <= 0)
+        {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("COMBAT WALK"))
+            {
+                anim.SetBool("CombatWalk", false);
+                anim.SetBool("StopCombatWalking", true);
+            }
+        }
+        if (Input.GetAxis("Horizontal") <= 0)
+        {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("ATTACK"))
+            {
+                anim.SetBool("CombatWalk", false);
+                anim.SetBool("StopCombatWalking", true);
+            }
+        }
+        if (Input.GetAxis("Horizontal") > 0)
+        {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("IDLE"))
+            {
+                anim.SetBool("Run", true);
+                anim.SetBool("StopRunning", false);
+            }
+        }
+
+        if (Input.GetAxis("Horizontal") <= 0)
+        {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("RUN"))
+            {
+                anim.SetBool("StopRunning", true);
+                anim.SetBool("Run", false);
+            }
         }
     }
 }

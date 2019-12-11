@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: ac2a98433583df74d9a41e8d1f9302e1
+guid: e25fd6b56622cbc41ade4d41b5d1c67a
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
   - first:
-      74: 4671459664662936169
-    second: SHEATH
+      74: -3291584517515146598
+    second: ATTACKVER2
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: SHEATH
-      takeName: SHEATH
-      internalID: 4671459664662936169
-      firstFrame: 865
-      lastFrame: 970
+      name: ATTACKVER2
+      takeName: ATTACKVER2
+      internalID: -3291584517515146598
+      firstFrame: 1500
+      lastFrame: 1604
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
