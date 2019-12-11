@@ -23,15 +23,38 @@ public class AZRIController : MonoBehaviour
             {
                 anim.SetTrigger("DrawSword");
             }
-
         }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("RUN"))
+            {
+                anim.SetTrigger("DrawSword");
+            }
+        }
+
         if (Input.GetButtonDown("Fire2"))
         {
             if (anim.GetCurrentAnimatorStateInfo(0).IsName("COMBAT IDLE"))
             {
                 anim.SetTrigger("Sheath");
             }
+        }
 
+        if (Input.GetButtonDown("Fire2"))
+        {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("COMBAT WALK"))
+            {
+                anim.SetTrigger("Sheath");
+            }
+        }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("ATTACK"))
+            {
+                anim.SetTrigger("Sheath");
+            }
         }
         if (Input.GetButtonDown("Fire1"))
         {
