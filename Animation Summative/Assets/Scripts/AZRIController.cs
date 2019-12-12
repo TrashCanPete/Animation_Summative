@@ -74,12 +74,9 @@ public class AZRIController : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire1"))
         {
-            anim.SetBool("Attack", true);
+            anim.SetTrigger("Attack");
         }
-        else
-        {
-            anim.SetBool("Attack", false);
-        }
+        
 
         if (Input.GetAxis("Horizontal") > 0)
         {
