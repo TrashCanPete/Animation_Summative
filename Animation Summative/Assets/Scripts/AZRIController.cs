@@ -6,6 +6,7 @@ public class AZRIController : MonoBehaviour
 {
     Animator anim;
     public float moveSpeed;
+    public float runSpeed;
   
 
     // Start is called before the first frame update
@@ -18,6 +19,21 @@ public class AZRIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float move = Input.GetAxis("Horizontal") * moveSpeed;
+        float run = Input.GetAxis("Horizontal") * moveSpeed;
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("COMBAT WALK") && move > 0)
+        {
+            transform.position += Vector3.forward * moveSpeed * Time.deltaTime;
+        }
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("RUN") && run > 0)
+        {
+            transform.position += Vector3.forward * runSpeed * Time.deltaTime;
+        }
+
+        
+
         if (Input.GetButtonDown("Fire2"))
         {
             if (anim.GetCurrentAnimatorStateInfo(0).IsName("FIDGET"))
