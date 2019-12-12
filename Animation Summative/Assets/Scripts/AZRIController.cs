@@ -5,6 +5,7 @@ using UnityEngine;
 public class AZRIController : MonoBehaviour
 {
     Animator anim;
+    public float moveSpeed;
   
 
     // Start is called before the first frame update
@@ -19,7 +20,7 @@ public class AZRIController : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire2"))
         {
-            if (anim.GetCurrentAnimatorStateInfo(0).IsName("IDLE"))
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("FIDGET"))
             {
                 anim.SetTrigger("DrawSword");
             }
@@ -27,7 +28,22 @@ public class AZRIController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire2"))
         {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("IDLE"))
+            {
+                anim.SetTrigger("DrawSword");
+            }
+        }
+
+        if (Input.GetButtonDown("Fire1") ^ Input.GetButtonDown("Fire2"))
+        {
             if (anim.GetCurrentAnimatorStateInfo(0).IsName("RUN"))
+            {
+                anim.SetTrigger("DrawSword");
+            }
+        }
+        if (Input.GetButtonDown("Fire2"))
+        {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("SHEATH"))
             {
                 anim.SetTrigger("DrawSword");
             }
@@ -71,6 +87,14 @@ public class AZRIController : MonoBehaviour
             {
                 anim.SetBool("CombatWalk", true);
                 anim.SetBool("StopCombatWalking", false);
+            }
+        }
+        if (Input.GetAxis("Horizontal") > 0)
+        {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("FIDGET"))
+            {
+                anim.SetBool("Run", true);
+                anim.SetBool("StopRunning", false);
             }
         }
 
